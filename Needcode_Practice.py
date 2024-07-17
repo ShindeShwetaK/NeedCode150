@@ -33,4 +33,21 @@ Space complexity:
 O(n)
 Explanation: The set used to store seen elements can contain up to n elements in the worst case.
 #######################################################################################
-#Q2.
+#Q2.Is anagram
+#https://neetcode.io/problems/is-anagram
+        s=sorted(s)
+        t=sorted(t)
+        if s==t:
+            return True
+        else: return False
+     #or
+        if len(s) != len(t):
+            return False
+
+        countS, countT = {}, {}
+
+        for i in range(len(s)):
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0)
+        return countS == countT
+#Complexity: O(n)
