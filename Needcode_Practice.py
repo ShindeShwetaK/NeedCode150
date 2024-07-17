@@ -21,5 +21,16 @@
                 return True
             hashset.add(n)
         return False
+           #or
+          return len(set(nums)) != len(nums)
+
+Time complexity:
+
+O(n), where n is the number of elements in the list.
+Explanation: We iterate through the list once, performing O(1) operations for each element.
+Space complexity:
+
+O(n)
+Explanation: The set used to store seen elements can contain up to n elements in the worst case.
 #######################################################################################
 #Q2.
