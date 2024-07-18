@@ -4,7 +4,8 @@
          for i in nums:
             if nums.count(i)>1:
                return True
-         return False
+         return False  
+         #Leetcode it gave time limit extended for above
            #or
 
           for i in range(0,len(nums)):
@@ -12,17 +13,18 @@
                    if nums[i]==nums[j] and i!=j:
                          print(True)
           print(False)
-             #or
-
-          hashset = set()
-
+           #Leetcode it gave time limit extended for above
+           #or
+        hashset = set()
         for n in nums:
             if n in hashset:
                 return True
             hashset.add(n)
         return False
+        #best solution
            #or
           return len(set(nums)) != len(nums)
+           #takes few ms more then above
 
 Time complexity:
 
