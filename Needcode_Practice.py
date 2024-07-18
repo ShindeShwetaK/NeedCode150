@@ -53,3 +53,25 @@ Explanation: The set used to store seen elements can contain up to n elements in
             countT[t[i]] = 1 + countT.get(t[i], 0)
         return countS == countT
 #Complexity: O(n)
+######################################################################################
+#Q3. 2 Sum
+#https://neetcode.io/problems/two-integer-sum
+       #best Solution compltes in 58ms
+
+        prevMap = {}  # val -> index
+        for i, n in enumerate(nums):
+            diff = target - n
+            if diff in prevMap:
+                return [prevMap[diff], i]
+            prevMap[n] = i
+                 
+                 #or Completes in 3323ms
+        for i in range(0,len(nums)):
+            for j in range(1,len(nums)):
+                if nums[i]+nums[j]==target and i!=j:
+                    return [i,j]
+         #O(n)
+########################################################################################
+
+        
+         
