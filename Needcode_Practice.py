@@ -26,6 +26,16 @@
           return len(set(nums)) != len(nums)
            #takes few ms more then above
 
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        duplicate = []
+        for i in nums:
+            if i in duplicate:
+                return True
+            duplicate.append(i) 
+        return False
+         
+
 Time complexity:
 
 O(n), where n is the number of elements in the list.
